@@ -21,7 +21,7 @@
 * `graded_count.txt`: 紀錄上次已出分的科目數量，用於比對更新。
 
 ## 🤖 維護者
-* **Feng, Ying-chen (馮映晨)**
+* **Feng, Ying-chen**
 
 ---
 希望每學期都能順利 Pass！加油加油！ (๑•̀ㅂ•́)و✧
