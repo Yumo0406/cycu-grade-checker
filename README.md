@@ -20,6 +20,17 @@
 * `.github/workflows/main.yml`: 自動化排程設定。
 * `graded_count.txt`: 紀錄上次已出分的科目數量，用於比對更新。
 
+## How to use this
+* 「嘿！這是我寫的 iTouch 成績自動通知機器人，你可以點進來照著設定：
+
+* Fork 專案：點網頁右上角的 Fork，把程式碼複製到你的 GitHub。
+
+* 設定 Secrets：在你自己的專案 Settings -> Secrets and variables -> Actions，新增這 5 個金鑰（填你自己的資訊）：STUDENT_ID、STUDENT_PW、EMAIL_SENDER、EMAIL_PASS、EMAIL_RECEIVER。
+
+* 開啟權限：到 Settings -> Actions -> General，把 Workflow permissions 改成 Read and write permissions 才能存檔。
+
+* 手動啟動：到 Actions 分頁點 iTouch Grade Checker -> Run workflow，成功的話就會收到信了！」
+
 ## 🤖 維護者
 * **Feng, Ying-chen**
 
