@@ -19,7 +19,7 @@ EMAIL_PASS = os.environ.get('EMAIL_PASS')
 EMAIL_RECEIVER = os.environ.get('EMAIL_RECEIVER')
 
 def send_grade_email(grade_list, count):
-    msg = MIMEText(f"嗨映晨！(｡･ω･｡)ﾉ\n\niTouch 成績更新囉！目前已有 {count} 科出分。\n\n清單如下：\n" + "\n".join(grade_list))
+    msg = MIMEText(f"嗨！(｡･ω･｡)ﾉ\n\niTouch 成績更新囉！目前已有 {count} 科出分。\n\n清單如下：\n" + "\n".join(grade_list))
     msg['Subject'] = f"🔔 iTouch 成績更新通知 ({count}科)"
     msg['From'] = f"成績機器人 <{EMAIL_SENDER}>"
     msg['To'] = EMAIL_RECEIVER
@@ -99,4 +99,5 @@ def run_grade_check():
         driver.quit()
 
 if __name__ == "__main__":
+
     run_grade_check()
