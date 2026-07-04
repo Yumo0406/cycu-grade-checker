@@ -70,7 +70,7 @@ def run_grade_check():
         lines = [l.strip() for l in content.splitlines() if l.strip()]
         grade_list, graded_count = [], 0
         for i in range(len(lines)):
-            if lines[i] == "1141" and i + 8 < len(lines):
+            if lines[i] == "1142" and i + 8 < len(lines):
                 subject = lines[i+4]
                 if "Rank" in subject or "排名" in subject: continue
                 val8, val9 = lines[i+8], (lines[i+9] if i+9 < len(lines) else "")
