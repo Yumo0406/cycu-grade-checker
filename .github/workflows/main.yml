@@ -2,7 +2,7 @@ name: iTouch Grade Checker
 
 on:
   schedule:
-   - cron: '*/30 * * * *' 
+    - cron: '*/30 * * * *' # 每30分鐘自動執行一次
   workflow_dispatch:      # 允許手動點擊執行
 
 jobs:
@@ -37,3 +37,11 @@ jobs:
           git add graded_count.txt || exit 0
           git commit -m "Update graded count" || exit 0
           git push
+
+      - name: Delete old workflow runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          retain_days: 0
+          keep_minimum_runs: 15
