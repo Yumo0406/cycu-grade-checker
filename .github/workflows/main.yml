@@ -2,7 +2,7 @@ name: iTouch Grade Checker
 
 on:
   schedule:
-    - cron: '0 * * * *' # 每小時自動執行一次
+   - cron: '*/30 * * * *' 
   workflow_dispatch:      # 允許手動點擊執行
 
 jobs:
